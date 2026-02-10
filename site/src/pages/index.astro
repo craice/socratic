@@ -8,7 +8,7 @@ const promptUrl = "https://raw.githubusercontent.com/craice/socratic/main/proces
 <Layout title="Socratic Product Discovery Copilot">
   <!-- Hero -->
   <header class="px-6 pt-16 pb-20 md:pt-24 md:pb-28 max-w-3xl mx-auto text-center">
-    <img src="/socratic.svg" alt="socratic" class="w-[480px] max-w-full mx-auto mb-6" />
+    <img src={`${import.meta.env.BASE_URL}/socratic.svg`} alt="socratic" class="w-[480px] max-w-full mx-auto mb-6" />
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-700 leading-tight tracking-tight mb-6">
       Make better product decisions with less guesswork
     </h1>
@@ -285,7 +285,7 @@ const promptUrl = "https://raw.githubusercontent.com/craice/socratic/main/proces
     <div class="max-w-3xl mx-auto">
       <div class="flex flex-col md:flex-row justify-between gap-8">
         <div>
-          <img src="/socratic.svg" alt="socratic" class="w-[240px] mb-2" />
+          <img src={`${import.meta.env.BASE_URL}/socratic.svg`} alt="socratic" class="w-[240px] mb-2" />
           <p class="text-text-muted text-sm">Open source. MIT licensed.</p>
         </div>
         <div class="flex flex-col sm:flex-row gap-8 text-sm text-text-muted">
