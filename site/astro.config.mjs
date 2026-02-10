@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://craice.github.io',
+  base: '/socratic',
   vite: {
     plugins: [tailwindcss()]
   }
