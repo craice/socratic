@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+site/dist/
+site/.astro/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Source / reference files (originals copied into process/ and evaluation/)
+socratic.md
+socratic-lab.jsx
+socratic-lab-results.md
+
+# Spec (build reference, not part of the public repo)
+SPEC.md
+socratic.ai

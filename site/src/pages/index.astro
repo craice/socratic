@@ -1,0 +1,308 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const repoUrl = "https://github.com/craice/socratic";
+const promptUrl = "https://raw.githubusercontent.com/craice/socratic/main/process/socratic-1.0.md";
+---
+
+<Layout title="Socratic Product Discovery Copilot">
+  <!-- Hero -->
+  <header class="px-6 pt-16 pb-20 md:pt-24 md:pb-28 max-w-3xl mx-auto text-center">
+    <img src="/socratic.svg" alt="socratic" class="w-[480px] max-w-full mx-auto mb-6" />
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-700 leading-tight tracking-tight mb-6">
+      Make better product decisions with less guesswork
+    </h1>
+    <p class="text-lg md:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto mb-10">
+      A structured process that uses the Socratic method to help teams separate what they know from what they assume — and test assumptions before committing.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#process" class="inline-block px-6 py-3 bg-text text-bg font-medium rounded-md hover:bg-text/90 transition-colors">
+        Learn the process
+      </a>
+      <a href={promptUrl} target="_blank" rel="noopener" class="inline-block px-6 py-3 border border-border text-text font-medium rounded-md hover:bg-surface transition-colors">
+        Get the prompt
+      </a>
+    </div>
+  </header>
+
+  <div class="w-full max-w-3xl mx-auto px-6">
+    <hr class="border-border" />
+  </div>
+
+  <!-- The Problem -->
+  <section class="px-6 py-16 md:py-24 max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-600 mb-8">The problem with product decisions</h2>
+    <div class="space-y-5 text-text-muted leading-relaxed text-lg">
+      <p>
+        Product teams make dozens of decisions every week with incomplete information. Which feature to build. Whether to invest in a new market. How to interpret conflicting user signals. These decisions compound, and most of them are made on gut feel, the loudest voice in the room, or whatever a competitor just shipped.
+      </p>
+      <p>
+        The failure modes are familiar: building features nobody asked for because someone "just knew." Debating the same question for weeks without new evidence. Confusing a stakeholder's conviction for a user's need. Launching an experiment with no success criteria, then arguing about what the results mean.
+      </p>
+      <p>
+        The cost is real — wasted engineering cycles, shipped features that get ignored, late pivots that could have been early kills. Not because teams lack intelligence, but because the process for handling uncertainty is either too heavy (months of research) or nonexistent (vibes).
+      </p>
+    </div>
+  </section>
+
+  <div class="w-full max-w-3xl mx-auto px-6">
+    <hr class="border-border" />
+  </div>
+
+  <!-- What is Product Discovery -->
+  <section class="px-6 py-16 md:py-24 max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-600 mb-8">What is product discovery?</h2>
+    <div class="space-y-5 text-text-muted leading-relaxed text-lg">
+      <p>
+        Discovery is the practice of reducing uncertainty <em>before</em> committing to build. It's not a phase that happens once at the start of a project — it's a continuous discipline of asking "are we solving the right problem?" and "how do we know?"
+      </p>
+      <p>
+        The goal isn't to eliminate uncertainty — that's impossible. The goal is to make uncertainty <em>explicit</em>, <em>prioritized</em>, and <em>testable</em>. To know what you're betting on, how much it matters, and what evidence would change your mind.
+      </p>
+      <p>
+        Good discovery separates facts from assumptions, identifies the assumptions that carry the most risk, and designs the cheapest possible tests to validate them. It's how you avoid building the wrong thing — or building the right thing for the wrong reasons.
+      </p>
+    </div>
+  </section>
+
+  <div class="w-full max-w-3xl mx-auto px-6">
+    <hr class="border-border" />
+  </div>
+
+  <!-- The Process -->
+  <section id="process" class="px-6 py-16 md:py-24 max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-600 mb-4">The process</h2>
+    <p class="text-text-muted text-lg mb-12">Six steps. Use them in order, skip what you don't need, repeat as evidence comes in.</p>
+
+    <ol class="space-y-8">
+      <li class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-text text-bg font-mono font-medium text-sm flex items-center justify-center mt-0.5">1</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Detect context</h3>
+          <p class="text-text-muted">What mode are you in — <strong>Exploring</strong> (no clear problem), <strong>Framing</strong> (problem known, needs structure), or <strong>Executing</strong> (direction set, needs tactics)? How risky is this decision — Low, Medium, or High? Match your rigor to the stakes.</p>
+        </div>
+      </li>
+      <li class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-text text-bg font-mono font-medium text-sm flex items-center justify-center mt-0.5">2</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Name the decision</h3>
+          <p class="text-text-muted">Force the choice into an explicit frame: "Are we choosing A vs B vs C?" Define the deadline and what "do nothing" means. If the decision is fuzzy, you're not ready to solve it.</p>
+        </div>
+      </li>
+      <li class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-text text-bg font-mono font-medium text-sm flex items-center justify-center mt-0.5">3</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Separate reality</h3>
+          <p class="text-text-muted">List what you actually know (<strong>Facts</strong>, with sources), what you've concluded (<strong>Inferences</strong>), what you believe without evidence (<strong>Assumptions</strong>), and what's missing (<strong>Unknowns</strong>). This step alone changes most conversations.</p>
+        </div>
+      </li>
+      <li class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-text text-bg font-mono font-medium text-sm flex items-center justify-center mt-0.5">4</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Pick the kill assumption</h3>
+          <p class="text-text-muted">Find the one assumption that, if false, would sink the entire plan. Not the most interesting assumption — the most dangerous one. This is where you focus your testing energy.</p>
+        </div>
+      </li>
+      <li class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-text text-bg font-mono font-medium text-sm flex items-center justify-center mt-0.5">5</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Turn it into a test</h3>
+          <p class="text-text-muted">One hypothesis, one cheapest reliable experiment, one metric window, one threshold. "If we do X, then Y will happen for segment Z within T, because mechanism M."</p>
+        </div>
+      </li>
+      <li class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full bg-text text-bg font-mono font-medium text-sm flex items-center justify-center mt-0.5">6</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Close the loop</h3>
+          <p class="text-text-muted">Recap what was decided. State the next step. Define the decision rule: proceed if…, pivot if…, stop if… Include a confidence score (1-5) with rationale. No open-ended "let's keep discussing."</p>
+        </div>
+      </li>
+    </ol>
+
+    <!-- Key Concepts -->
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="border border-border rounded-lg p-6">
+        <h4 class="font-semibold mb-2">FIAU Framework</h4>
+        <p class="text-text-muted text-sm leading-relaxed"><strong>Facts</strong> (verified, with source) · <strong>Inferences</strong> (conclusions from facts, not yet validated) · <strong>Assumptions</strong> (beliefs without evidence) · <strong>Unknowns</strong> (missing information to collect)</p>
+      </div>
+      <div class="border border-border rounded-lg p-6">
+        <h4 class="font-semibold mb-2">Kill Assumption</h4>
+        <p class="text-text-muted text-sm leading-relaxed">The single assumption that would destroy the plan if proven false. Not the most discussed one — the most consequential one. Focus testing energy here first.</p>
+      </div>
+      <div class="border border-border rounded-lg p-6">
+        <h4 class="font-semibold mb-2">Decision Rules</h4>
+        <p class="text-text-muted text-sm leading-relaxed"><strong>Proceed</strong> if the threshold is met. <strong>Pivot</strong> if results are partial. <strong>Stop</strong> if the kill assumption is falsified. No ambiguous "let's revisit later."</p>
+      </div>
+      <div class="border border-border rounded-lg p-6">
+        <h4 class="font-semibold mb-2">Risk Calibration</h4>
+        <p class="text-text-muted text-sm leading-relaxed">Not every decision needs full rigor. A CTA test gets 1-2 questions and a quick threshold. A pricing restructure gets triangulated evidence and explicit stop rules.</p>
+      </div>
+    </div>
+
+    <p class="mt-10 text-text-muted">
+      The full process covers mode detection, bias awareness, triangulation, experiment design, and convergence signals. <a href={`${repoUrl}/blob/main/process/socratic-1.0.md`} class="text-accent underline underline-offset-2 hover:text-accent/80">Read the complete operating instructions</a>.
+    </p>
+  </section>
+
+  <div class="w-full max-w-3xl mx-auto px-6">
+    <hr class="border-border" />
+  </div>
+
+  <!-- Example -->
+  <section class="px-6 py-16 md:py-24 max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-600 mb-4">See it in action</h2>
+    <p class="text-text-muted text-lg mb-10">A fitness app spent $400k building a meal planning feature. 4% adoption. 12% repeat usage. The team lead says it just needs better onboarding. Here's how the Socratic process handles it.</p>
+
+    <div class="space-y-6">
+      <div class="bg-surface rounded-lg p-6">
+        <p class="text-sm font-medium text-text-light uppercase tracking-wide mb-3">The messy input</p>
+        <p class="text-text-muted italic leading-relaxed">"We spent 8 months building a meal planning feature. It's live for 3 months now but only 4% of users have tried it, and of those, only 12% used it more than once. Our team lead thinks we just need better onboarding. We've already invested $400k. Should we keep investing or move on?"</p>
+      </div>
+
+      <div class="bg-surface rounded-lg p-6">
+        <p class="text-sm font-medium text-text-light uppercase tracking-wide mb-3">Separate reality</p>
+        <ul class="space-y-2 text-text-muted">
+          <li><strong>Fact:</strong> 4% adoption, 12% repeat usage (1st to 2nd use)</li>
+          <li><strong>Inference:</strong> "Better onboarding" will fix it</li>
+          <li><strong>Assumption:</strong> The feature solves a real problem but discoverability is blocking it</li>
+          <li><strong>Unknown:</strong> Why 96% never tried it. Why 88% didn't return.</li>
+        </ul>
+      </div>
+
+      <div class="bg-surface rounded-lg p-6">
+        <p class="text-sm font-medium text-text-light uppercase tracking-wide mb-3">Kill assumption</p>
+        <p class="text-text-muted"><strong>"Users want meal planning help."</strong> — Sunk cost is sunk. The $400k is irrelevant to the forward-looking decision. If users don't want this feature, no amount of onboarding fixes it.</p>
+      </div>
+
+      <div class="bg-surface rounded-lg p-6">
+        <p class="text-sm font-medium text-text-light uppercase tracking-wide mb-3">Cheapest test</p>
+        <p class="text-text-muted mb-3">Email 200 engaged users with a personal invite. Track: open, click, setup, D7 return. Interview 10 who clicked but didn't finish. <strong>Cost: ~$0. Time: 1 week.</strong></p>
+        <div class="text-sm text-text-muted space-y-1">
+          <p><strong>Proceed</strong> if 40%+ complete setup AND 25%+ return D7</p>
+          <p><strong>Pivot</strong> if setup is high but D7 return is low (feature isn't solving a real problem)</p>
+          <p><strong>Stop</strong> if &lt;20% of engaged, invited users complete setup (onboarding won't save it)</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="mt-8 text-text-muted text-sm">
+      This scenario scored 18/20 in evaluation — strong across all 10 criteria. <a href={`${repoUrl}/tree/main/process/examples`} class="text-accent underline underline-offset-2 hover:text-accent/80">See more worked examples</a>.
+    </p>
+  </section>
+
+  <div class="w-full max-w-3xl mx-auto px-6">
+    <hr class="border-border" />
+  </div>
+
+  <!-- Tested, Not Theoretical -->
+  <section class="px-6 py-16 md:py-24 max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-600 mb-4">Tested, not theoretical</h2>
+    <p class="text-text-muted text-lg mb-12">
+      We tested this process against 20 realistic product scenarios spanning 8 industries, 3 discovery modes, and 7 types of cognitive traps. Each scenario was processed by the Copilot, then independently evaluated against 10 criteria.
+    </p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+      <div class="text-center">
+        <p class="text-4xl md:text-5xl font-700 text-text">76%</p>
+        <p class="text-sm text-text-muted mt-1">Aggregate score</p>
+        <p class="text-xs text-text-light">305 of 400 points</p>
+      </div>
+      <div class="text-center">
+        <p class="text-4xl md:text-5xl font-700 text-text">1.80</p>
+        <p class="text-sm text-text-muted mt-1">Risk & Questions</p>
+        <p class="text-xs text-text-light">out of 2.0 — strongest</p>
+      </div>
+      <div class="text-center">
+        <p class="text-4xl md:text-5xl font-700 text-text">11</p>
+        <p class="text-sm text-text-muted mt-1">High performers</p>
+        <p class="text-xs text-text-light">scored 16+ out of 20</p>
+      </div>
+      <div class="text-center">
+        <p class="text-4xl md:text-5xl font-700 text-accent">1.15</p>
+        <p class="text-sm text-text-muted mt-1">Testable Hypothesis</p>
+        <p class="text-xs text-text-light">out of 2.0 — weakest</p>
+      </div>
+    </div>
+
+    <div class="bg-surface rounded-lg p-6 text-text-muted text-sm leading-relaxed">
+      <p class="mb-3">
+        <strong>What works well:</strong> The process consistently calibrates depth to risk level (1.80/2), asks focused questions (1.80/2), and correctly detects the discovery mode (1.70/2). It caught solution-first thinking, confirmation bias, and HiPPO patterns perfectly across all scenarios where those traps were embedded.
+      </p>
+      <p class="mb-3">
+        <strong>Where it falls short:</strong> Testable hypothesis formation (1.15/2), confidence scoring (1.30/2), and FIAU separation (1.45/2) are the weakest areas. The process often asks the right questions but doesn't always follow through to a concrete, testable next step with explicit structured outputs.
+      </p>
+      <p>
+        These gaps are where v1.1 improvements will focus. Full analysis in the <a href={`${repoUrl}/blob/main/evaluation/EVALUATION.md`} class="text-accent underline underline-offset-2 hover:text-accent/80">evaluation report</a>.
+      </p>
+    </div>
+  </section>
+
+  <div class="w-full max-w-3xl mx-auto px-6">
+    <hr class="border-border" />
+  </div>
+
+  <!-- How to Use It -->
+  <section class="px-6 py-16 md:py-24 max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-600 mb-10">How to use it</h2>
+
+    <div class="space-y-8">
+      <div class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full border border-border font-mono font-medium text-sm flex items-center justify-center mt-0.5 text-text-muted">1</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">With an LLM</h3>
+          <p class="text-text-muted mb-3">Give your AI assistant the URL to the prompt file. It works with Claude, ChatGPT, Gemini, or any capable model. Then start a conversation about a product decision you're facing.</p>
+          <code class="block bg-surface rounded px-4 py-3 text-sm font-mono text-text-muted break-all">{promptUrl}</code>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full border border-border font-mono font-medium text-sm flex items-center justify-center mt-0.5 text-text-muted">2</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Without an LLM</h3>
+          <p class="text-text-muted">Use the <a href={`${repoUrl}/blob/main/process/cheatsheet.md`} class="text-accent underline underline-offset-2 hover:text-accent/80">cheatsheet</a> as a mental model in your next product discussion. The 6-step loop, FIAU separation, and decision rule templates work with or without AI.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-5">
+        <span class="flex-shrink-0 w-8 h-8 rounded-full border border-border font-mono font-medium text-sm flex items-center justify-center mt-0.5 text-text-muted">3</span>
+        <div>
+          <h3 class="font-semibold text-lg mb-2">Deep dive</h3>
+          <p class="text-text-muted">Read the <a href={`${repoUrl}/blob/main/process/socratic-1.0.md`} class="text-accent underline underline-offset-2 hover:text-accent/80">full operating instructions</a> to understand every mechanism — mode detection, bias calibration, triangulation, experiment design, threshold templates, and convergence signals.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-surface rounded-lg p-6">
+      <p class="text-sm font-medium text-text-light uppercase tracking-wide mb-3">Try it now</p>
+      <p class="text-text-muted">Open your preferred AI assistant, paste the prompt URL above, and try:</p>
+      <p class="mt-3 italic text-text-muted">"We want to add gamification to our app. Can you help?"</p>
+      <p class="mt-2 text-text-light text-sm">Watch it rewind from solution to problem, separate assumptions from facts, and guide you toward a testable hypothesis.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-border px-6 py-12 mt-8">
+    <div class="max-w-3xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between gap-8">
+        <div>
+          <img src="/socratic.svg" alt="socratic" class="w-[240px] mb-2" />
+          <p class="text-text-muted text-sm">Open source. MIT licensed.</p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-8 text-sm text-text-muted">
+          <div class="space-y-2">
+            <p class="font-medium text-text">Resources</p>
+            <a href={`${repoUrl}/blob/main/process/socratic-1.0.md`} class="block hover:text-accent">Full Process</a>
+            <a href={`${repoUrl}/blob/main/process/cheatsheet.md`} class="block hover:text-accent">Cheatsheet</a>
+            <a href={`${repoUrl}/tree/main/process/examples`} class="block hover:text-accent">Worked Examples</a>
+          </div>
+          <div class="space-y-2">
+            <p class="font-medium text-text">Project</p>
+            <a href={repoUrl} class="block hover:text-accent">GitHub</a>
+            <a href={`${repoUrl}/blob/main/evaluation/EVALUATION.md`} class="block hover:text-accent">Evaluation Report</a>
+            <a href={`${repoUrl}/blob/main/LICENSE`} class="block hover:text-accent">MIT License</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</Layout>

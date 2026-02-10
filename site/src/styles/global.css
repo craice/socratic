@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FFFFFF;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+  --color-text-light: #999999;
+  --color-accent: #2a7f7f;
+  --color-accent-light: #e6f3f3;
+  --color-border: #e5e5e0;
+  --color-surface: #f0f0ec;
+
+  --font-serif: 'Ovo', Georgia, 'Times New Roman', serif;
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Menlo', monospace;
+}

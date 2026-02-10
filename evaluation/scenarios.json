@@ -1,0 +1,182 @@
+[
+  {
+    "id": "s01",
+    "title": "Dashboard SaaS",
+    "mode": "Exploring",
+    "risk": "Medium",
+    "trap": "Solution-first",
+    "industry": "SaaS B2B",
+    "prompt": "We need to build a dashboard for our enterprise clients. They keep asking for better analytics. Our competitor just launched one and clients are mentioning it in calls. Can you help us spec this out?"
+  },
+  {
+    "id": "s02",
+    "title": "Retention E-commerce",
+    "mode": "Framing",
+    "risk": "High",
+    "trap": "Vague metrics",
+    "industry": "E-commerce",
+    "prompt": "Our retention is bad. Users buy once and never come back. We think we need a loyalty program. We've been discussing this for weeks but can't agree on the approach. Some people want points, others want tiered discounts. Revenue is around $2M/month, average order $45. What should we do?"
+  },
+  {
+    "id": "s03",
+    "title": "CTA Copy Test",
+    "mode": "Executing",
+    "risk": "Low",
+    "trap": "None",
+    "industry": "SaaS B2C",
+    "prompt": "We want to A/B test two versions of our upgrade CTA on the free plan dashboard. Version A: \"Unlock Pro features\" vs Version B: \"Start your free trial\". Current click-through is 2.1%. We have ~50k monthly active free users. How should we set this up?"
+  },
+  {
+    "id": "s04",
+    "title": "Pricing Pivot Fintech",
+    "mode": "Framing",
+    "risk": "High",
+    "trap": "HiPPO",
+    "industry": "Fintech",
+    "prompt": "Our CEO wants us to switch from per-transaction pricing to a monthly subscription model. He saw a competitor do it and thinks it's the future. We have 12,000 active merchants processing about $8M/month through us. He wants to announce this at the conference in 6 weeks. What do you think?"
+  },
+  {
+    "id": "s05",
+    "title": "Expansion vs Density",
+    "mode": "Exploring",
+    "risk": "Medium",
+    "trap": "Opinion loop",
+    "industry": "Marketplace",
+    "prompt": "We've been going back and forth on whether to expand to a new city or improve density in our current market. Our marketplace connects local service providers with customers. We're in 3 cities, ~2,000 providers, ~15,000 monthly transactions. Some people think supply is the bottleneck, others think it's demand. We've been debating this for a month."
+  },
+  {
+    "id": "s06",
+    "title": "Onboarding Edtech",
+    "mode": "Executing",
+    "risk": "Medium",
+    "trap": "Survivorship bias",
+    "industry": "Edtech",
+    "prompt": "We analyzed our top 100 most engaged teachers and found they all completed the \"create first class\" step within 48h of signup. So we want to redesign onboarding to push all new users to create a class in the first session. We have the designs ready and want to validate the hypothesis. D7 retention for teachers is 23%, and we think this can push it to 35%."
+  },
+  {
+    "id": "s07",
+    "title": "Meal Planner Health",
+    "mode": "Exploring",
+    "risk": "High",
+    "trap": "Sunk cost",
+    "industry": "Health/Wellness",
+    "prompt": "We spent 8 months building a meal planning feature for our fitness app. It's live for 3 months now but only 4% of users have tried it, and of those, only 12% used it more than once. Our team lead thinks we just need better onboarding for the feature. We've already invested $400k in it. Should we keep investing or move on?"
+  },
+  {
+    "id": "s08",
+    "title": "Cold Chain Logistics",
+    "mode": "Framing",
+    "risk": "High",
+    "trap": "Recency bias",
+    "industry": "Logistics",
+    "prompt": "Last quarter we got 3 inbound requests from large agricultural companies wanting cold-chain logistics. We currently do general freight only. Our sales team is excited and wants to build a cold-chain vertical. It would require $2M+ investment in specialized vehicles and compliance. One of the 3 leads already went with a competitor. What's our next move?"
+  },
+  {
+    "id": "s09",
+    "title": "Chatbot Support",
+    "mode": "Exploring",
+    "risk": "Medium",
+    "trap": "Solution-first",
+    "industry": "Insurance",
+    "prompt": "We want to implement an AI chatbot to handle tier-1 support tickets. Our CSAT is 72% and average resolution time is 4.2 hours. We've already talked to 3 vendors. Which one should we pick?"
+  },
+  {
+    "id": "s10",
+    "title": "Feature Sunset",
+    "mode": "Framing",
+    "risk": "High",
+    "trap": "Sunk cost",
+    "industry": "SaaS B2B",
+    "prompt": "We have a legacy reporting module that 8% of our users still use. It costs us $15k/month in maintenance and blocks our migration to the new architecture. Engineering wants to kill it. Product is worried about churn from those 8%. The module was our flagship feature 3 years ago. How do we decide?"
+  },
+  {
+    "id": "s11",
+    "title": "Push Notifications",
+    "mode": "Executing",
+    "risk": "Low",
+    "trap": "None",
+    "industry": "Social/Consumer",
+    "prompt": "We want to increase push notification opt-in from 34% to 45%. We're testing a new permission prompt that explains benefits before the OS prompt appears. We've built both versions and need to set up the experiment. DAU is ~200k. What's the test plan?"
+  },
+  {
+    "id": "s12",
+    "title": "Self-serve vs Sales-led",
+    "mode": "Exploring",
+    "risk": "High",
+    "trap": "Confirmation bias",
+    "industry": "SaaS B2B",
+    "prompt": "We've always been sales-led, but our new VP of Product thinks we should go PLG. He keeps pointing to Slack and Notion as examples. Our ACV is $25k, sales cycle is 45 days, and we have 340 enterprise accounts. Last quarter, 12 people signed up for our free trial organically but none converted. He says the trial experience just needs work."
+  },
+  {
+    "id": "s13",
+    "title": "Mobile App Launch",
+    "mode": "Framing",
+    "risk": "Medium",
+    "trap": "Anchoring",
+    "industry": "Fintech",
+    "prompt": "Our competitor's mobile app has 4.8 stars and 500k downloads. We're planning our own mobile app and the PM set the goal at 4.5 stars and 100k downloads in 6 months. We currently have a mobile-responsive web app with 80k monthly mobile visitors. Is this the right approach?"
+  },
+  {
+    "id": "s14",
+    "title": "Marketplace Take Rate",
+    "mode": "Framing",
+    "risk": "High",
+    "trap": "HiPPO",
+    "industry": "Marketplace",
+    "prompt": "Our board wants us to increase take rate from 12% to 18% to improve unit economics before our Series B. They say the market will bear it because our NPS is 67. We have 4,200 active sellers and process $3.2M GMV/month. The board wants this implemented in Q2. How should we approach this?"
+  },
+  {
+    "id": "s15",
+    "title": "Gamification Edtech",
+    "mode": "Exploring",
+    "risk": "Medium",
+    "trap": "Solution-first",
+    "industry": "Edtech",
+    "prompt": "We want to add gamification to our learning platform — badges, streaks, leaderboards, the whole thing. Duolingo does it really well and our students are in the same age group (18-25). Can you help us design the points system?"
+  },
+  {
+    "id": "s16",
+    "title": "Churn Prediction",
+    "mode": "Executing",
+    "risk": "Medium",
+    "trap": "Vague metrics",
+    "industry": "SaaS B2B",
+    "prompt": "We built a churn prediction model that flags accounts at risk. It's 78% accurate on historical data. We want to trigger automated outreach (email + in-app) when the model flags an account. Monthly churn is 3.2%. We need to set up the intervention experiment. What metrics and thresholds should we use?"
+  },
+  {
+    "id": "s17",
+    "title": "API Platform Strategy",
+    "mode": "Exploring",
+    "risk": "High",
+    "trap": "Confirmation bias",
+    "industry": "Developer Tools",
+    "prompt": "We want to become a platform and open our API to third-party developers. Our CTO has been pushing this for 2 years. We have 2,300 customers using our tool directly. Three customers asked about API access in the last 6 months. Our CTO wrote a 40-page strategy doc about the platform vision. Should we go for it?"
+  },
+  {
+    "id": "s18",
+    "title": "Referral Program",
+    "mode": "Executing",
+    "risk": "Low",
+    "trap": "None",
+    "industry": "Consumer App",
+    "prompt": "We want to launch a referral program. Current organic growth is 8% MoM. We're testing two incentive structures: (A) $10 credit for referrer only vs (B) $5 for both referrer and referee. We have 120k active users. What's the experiment setup?"
+  },
+  {
+    "id": "s19",
+    "title": "Enterprise Tier",
+    "mode": "Framing",
+    "risk": "High",
+    "trap": "Anchoring",
+    "industry": "SaaS B2B",
+    "prompt": "We're launching an Enterprise tier. Our current pricing is $29/mo (Starter) and $99/mo (Pro). A pricing consultant recommended $499/mo for Enterprise based on competitor benchmarking. We have 15 Pro accounts that asked about SSO, audit logs, and custom roles. Sales thinks $499 is too low, the consultant says it's market rate. What's the right call?"
+  },
+  {
+    "id": "s20",
+    "title": "Content Moderation",
+    "mode": "Framing",
+    "risk": "High",
+    "trap": "Survivorship bias",
+    "industry": "Social/UGC",
+    "prompt": "Our top 50 creators produce 60% of the content and have zero moderation flags. So we want to give all creators with >10k followers auto-approval (skip moderation queue) to reduce review costs and improve creator satisfaction. Currently we review 100% of posts, which takes 2.3 hours average. Our moderation team costs $28k/month. What do you think?"
+  }
+]
