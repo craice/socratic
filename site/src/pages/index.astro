@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 
 const repoUrl = "https://github.com/craice/socratic";
 const promptUrl = "https://raw.githubusercontent.com/craice/socratic/main/process/socratic-1.0.md";
+// Full prompt text, inlined at build time so it can be copied without the LLM needing to fetch a URL.
+import promptText from '../../../process/socratic-1.0.md?raw';
 ---
 
 <Layout title="Socratic Product Discovery Copilot">
@@ -20,7 +22,7 @@ const promptUrl = "https://raw.githubusercontent.com/craice/socratic/main/proces
         Learn the process
       </a>
       <a href={promptUrl} target="_blank" rel="noopener" class="inline-block px-6 py-3 border border-border text-text font-medium rounded-md hover:bg-surface transition-colors">
-        Get the prompt
+        View the prompt
       </a>
     </div>
   </header>
@@ -250,8 +252,13 @@ const promptUrl = "https://raw.githubusercontent.com/craice/socratic/main/proces
         <span class="flex-shrink-0 w-8 h-8 rounded-full border border-border font-mono font-medium text-sm flex items-center justify-center mt-0.5 text-text-muted">1</span>
         <div>
           <h3 class="font-semibold text-lg mb-2">With an LLM</h3>
-          <p class="text-text-muted mb-3">Give your AI assistant the URL to the prompt file. It works with Claude, ChatGPT, Gemini, or any capable model. Then start a conversation about a product decision you're facing.</p>
+          <p class="text-text-muted mb-3">Copy the full prompt and paste it into your AI assistant — Claude, ChatGPT, Gemini, or any capable model. Then start a conversation about a product decision you're facing.</p>
+          <button type="button" data-copy-prompt class="inline-block px-5 py-2.5 mb-3 bg-text text-bg font-medium rounded-md hover:bg-text/90 transition-colors cursor-pointer">
+            <span data-copy-label>Copy the prompt</span>
+          </button>
+          <p class="text-text-muted text-sm mb-2">Or, if your assistant can read web pages, give it the URL:</p>
           <code class="block bg-surface rounded px-4 py-3 text-sm font-mono text-text-muted break-all">{promptUrl}</code>
+          <template id="prompt-text">{promptText}</template>
         </div>
       </div>
 
@@ -305,4 +312,19 @@ const promptUrl = "https://raw.githubusercontent.com/craice/socratic/main/proces
       </div>
     </div>
   </footer>
+  <script>
+    document.querySelectorAll<HTMLButtonElement>('[data-copy-prompt]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const text = document.querySelector<HTMLTemplateElement>('#prompt-text')?.content.textContent ?? '';
+        const label = btn.querySelector('[data-copy-label]');
+        try {
+          await navigator.clipboard.writeText(text);
+          if (label) label.textContent = 'Copied ✓';
+        } catch {
+          if (label) label.textContent = 'Copy failed — use the URL below';
+        }
+        setTimeout(() => { if (label) label.textContent = 'Copy the prompt'; }, 2500);
+      });
+    });
+  </script>
 </Layout>
