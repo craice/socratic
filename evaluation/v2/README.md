@@ -30,8 +30,19 @@
 
 ## Findings
 
-1. **The jump from v1 is the model, not the full prompt.** On the 5 control scenarios, the condensed prompt scored 86/100 and the full prompt 84/100 (10 criteria). The full prompt produced ~25% longer first replies.
-2. **Multi-turn barely matters** (+5 points over 20 scenarios). v1's weak hypothesis/confidence scores were not mainly a single-turn artifact.
-3. **Concision is the real weakness.** First replies average ~950 words regardless of risk; Low-risk scenarios averaged 1,054 words, the longest of any tier.
-4. **Mode detection fails in one direction:** 7 of 8 errors are Exploring scenarios labeled Framing. Either the prompt's definition of Exploring is too narrow or the expected labels are debatable.
-5. **Rubric is saturated.** Four criteria are at 2.00 on every scenario; they no longer discriminate.
+1. **No detectable difference between the full and the condensed prompt** (n=5): the condensed prompt scored 86/100 and the full prompt 84/100 on the 10 original criteria, within run-to-run noise. The full prompt produced ~25% longer first replies. The gain over v1 cannot yet be attributed to the copilot model vs a more lenient evaluator, since both changed (see open questions).
+2. **Multi-turn barely matters** (+5 points over 20 scenarios). With this model, the first reply already contains every element of the loop.
+3. **No conversation closed on its own.** All 20 reached the 3-reply cap; the copilot kept producing ~1,000-word replies with further questions. "Conversation" scores are for cut-off conversations.
+4. **Concision is the real weakness.** First replies average ~950 words regardless of risk; Low-risk scenarios averaged 1,054 words, the longest of any tier.
+5. **Mode detection: every Exploring scenario lost points (7/7).** Where the copilot states a mode, it says Framing. These scenarios all arrive with a solution in hand (dashboard, chatbot, gamification, API platform). `socratic-1.0.md` defines Exploring as "no clear problem yet", describing the mode the user *is in*; the answer key labels the mode the user *should be in*. The disagreement is in the definition, not only in the copilot.
+6. **Rubric is saturated.** Four criteria are at 2.00 on every scenario; they no longer discriminate.
+
+## Caveats
+
+- **Harness context:** subagents run inside Claude Code and received the repository owner's global `CLAUDE.md` (working-style instructions such as "point out risks even when not asked"). This may push replies toward thoroughness and is a confound for the concision result. A direct-API run would remove it.
+- **Same-family judge:** copilot, simulated user and evaluator are the same model.
+- No subagent read anything other than its prompt file or persona file (audited from transcripts).
+
+## Open questions
+
+- Re-score the 20 v1 replies (`../socratic-lab-results.md`) with this evaluator to separate "better copilot" from "more lenient judge".
