@@ -99,6 +99,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on suggesting process impr
 
 ## Credits
 
+Created by [Rafael Craice](https://craice.me).
+
 Logo typeset in [Ovo](https://fonts.google.com/specimen/Ovo) by Mary Bellamy, licensed under the [SIL Open Font License](https://openfontlicense.org/).
 
 ## License
