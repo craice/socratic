@@ -6,7 +6,23 @@
     "risk": "Medium",
     "trap": "Solution-first",
     "industry": "SaaS B2B",
-    "prompt": "We need to build a dashboard for our enterprise clients. They keep asking for better analytics. Our competitor just launched one and clients are mentioning it in calls. Can you help us spec this out?"
+    "prompt": "We need to build a dashboard for our enterprise clients. They keep asking for better analytics. Our competitor just launched one and clients are mentioning it in calls. Can you help us spec this out?",
+    "persona": {
+      "role": "Head of Product at a B2B SaaS (project management for agencies)",
+      "stance": "Wants to ship a dashboard fast; mildly defensive that the competitor is pulling ahead.",
+      "knows": [
+        "~180 enterprise clients, ~$4.1M ARR",
+        "CSMs logged ~25 'better analytics' mentions in the last quarter; nobody categorized what exactly clients want",
+        "Most requests come from client ops managers who export CSVs weekly to build their own reports in Excel",
+        "2 clients mentioned the competitor's dashboard in renewal calls; 1 churned last quarter citing 'reporting' among other reasons",
+        "Engineering estimate for a full dashboard: ~1 quarter for 2 engineers"
+      ],
+      "unknowns": [
+        "Which specific questions clients try to answer with the data",
+        "Whether CSV export usage correlates with retention",
+        "Whether the churned client would have stayed with better reporting"
+      ]
+    }
   },
   {
     "id": "s02",
@@ -15,7 +31,23 @@
     "risk": "High",
     "trap": "Vague metrics",
     "industry": "E-commerce",
-    "prompt": "Our retention is bad. Users buy once and never come back. We think we need a loyalty program. We've been discussing this for weeks but can't agree on the approach. Some people want points, others want tiered discounts. Revenue is around $2M/month, average order $45. What should we do?"
+    "prompt": "Our retention is bad. Users buy once and never come back. We think we need a loyalty program. We've been discussing this for weeks but can't agree on the approach. Some people want points, others want tiered discounts. Revenue is around $2M/month, average order $45. What should we do?",
+    "persona": {
+      "role": "Growth lead at a DTC home-goods e-commerce brand",
+      "stance": "Convinced a loyalty program is the answer; tired of the internal debate.",
+      "knows": [
+        "~44k orders/month, AOV $45",
+        "Repeat purchase rate within 90 days: 14% (no one defined 'retention' formally before)",
+        "Category benchmark they've heard: 25-30%, source unclear",
+        "Post-purchase email flow is a single 'thank you' email",
+        "Product lifespan is long (towels, bedding): typical replacement cycle 12-18 months",
+        "~30% of first orders use a 15% welcome discount"
+      ],
+      "unknowns": [
+        "Repeat rate by acquisition channel or by first-order discount",
+        "Why one-time buyers don't return (no survey ever run)"
+      ]
+    }
   },
   {
     "id": "s03",
@@ -24,7 +56,21 @@
     "risk": "Low",
     "trap": "None",
     "industry": "SaaS B2C",
-    "prompt": "We want to A/B test two versions of our upgrade CTA on the free plan dashboard. Version A: \"Unlock Pro features\" vs Version B: \"Start your free trial\". Current click-through is 2.1%. We have ~50k monthly active free users. How should we set this up?"
+    "prompt": "We want to A/B test two versions of our upgrade CTA on the free plan dashboard. Version A: \"Unlock Pro features\" vs Version B: \"Start your free trial\". Current click-through is 2.1%. We have ~50k monthly active free users. How should we set this up?",
+    "persona": {
+      "role": "PM for monetization at a B2B SaaS",
+      "stance": "Just wants a clean test setup; already aligned internally.",
+      "knows": [
+        "Primary metric they care about: paid conversion, not just clicks",
+        "Free-to-paid conversion is 1.4%/month; trial-to-paid is 22%",
+        "Version B would start a 14-day trial; Version A goes to the pricing page",
+        "Can run the test for up to 4 weeks",
+        "Feature flags and analytics (Amplitude) are in place"
+      ],
+      "unknowns": [
+        "Minimum detectable effect they'd accept"
+      ]
+    }
   },
   {
     "id": "s04",
@@ -33,7 +79,23 @@
     "risk": "High",
     "trap": "HiPPO",
     "industry": "Fintech",
-    "prompt": "Our CEO wants us to switch from per-transaction pricing to a monthly subscription model. He saw a competitor do it and thinks it's the future. We have 12,000 active merchants processing about $8M/month through us. He wants to announce this at the conference in 6 weeks. What do you think?"
+    "prompt": "Our CEO wants us to switch from per-transaction pricing to a monthly subscription model. He saw a competitor do it and thinks it's the future. We have 12,000 active merchants processing about $8M/month through us. He wants to announce this at the conference in 6 weeks. What do you think?",
+    "persona": {
+      "role": "VP Product at a payments fintech serving small merchants",
+      "stance": "Personally skeptical but needs to bring the CEO a credible answer, not a 'no'.",
+      "knows": [
+        "Current take: 1.9% + $0.10 per transaction; revenue ~$160k/month",
+        "Merchant volume is very skewed: top 10% of merchants = ~70% of volume",
+        "Median merchant processes ~$250/month",
+        "The competitor that switched serves mid-market, not micro-merchants",
+        "No customer research on pricing preferences has been done",
+        "Monthly merchant churn: 2.5%"
+      ],
+      "unknowns": [
+        "Price sensitivity of small vs large merchants",
+        "How the competitor's switch actually performed"
+      ]
+    }
   },
   {
     "id": "s05",
@@ -42,7 +104,23 @@
     "risk": "Medium",
     "trap": "Opinion loop",
     "industry": "Marketplace",
-    "prompt": "We've been going back and forth on whether to expand to a new city or improve density in our current market. Our marketplace connects local service providers with customers. We're in 3 cities, ~2,000 providers, ~15,000 monthly transactions. Some people think supply is the bottleneck, others think it's demand. We've been debating this for a month."
+    "prompt": "We've been going back and forth on whether to expand to a new city or improve density in our current market. Our marketplace connects local service providers with customers. We're in 3 cities, ~2,000 providers, ~15,000 monthly transactions. Some people think supply is the bottleneck, others think it's demand. We've been debating this for a month.",
+    "persona": {
+      "role": "Co-founder/COO of a local home-services marketplace",
+      "stance": "Leans toward 'demand is the bottleneck' and wants to expand; frustrated by the month-long debate and will initially argue their side.",
+      "knows": [
+        "Cities: A (launched 3 yrs ago, 60% of transactions), B and C (launched last year)",
+        "Request fill rate: City A 81%, City B 58%, City C 64%",
+        "Provider utilization in City A: median provider gets 6 jobs/month and says they want ~15",
+        "~22% of customer requests in B/C go unfilled within 24h",
+        "Customer repeat rate in City A is 40% at 90 days",
+        "Runway: 14 months"
+      ],
+      "unknowns": [
+        "Fill rate broken down by service category",
+        "Why providers churn"
+      ]
+    }
   },
   {
     "id": "s06",
@@ -51,7 +129,22 @@
     "risk": "Medium",
     "trap": "Survivorship bias",
     "industry": "Edtech",
-    "prompt": "We analyzed our top 100 most engaged teachers and found they all completed the \"create first class\" step within 48h of signup. So we want to redesign onboarding to push all new users to create a class in the first session. We have the designs ready and want to validate the hypothesis. D7 retention for teachers is 23%, and we think this can push it to 35%."
+    "prompt": "We analyzed our top 100 most engaged teachers and found they all completed the \"create first class\" step within 48h of signup. So we want to redesign onboarding to push all new users to create a class in the first session. We have the designs ready and want to validate the hypothesis. D7 retention for teachers is 23%, and we think this can push it to 35%.",
+    "persona": {
+      "role": "Product manager for activation at a K-12 edtech platform",
+      "stance": "Excited about the finding, designs are done, wants to ship; mildly resistant to 'more analysis'.",
+      "knows": [
+        "~6,000 teacher signups/month",
+        "Overall, ~31% of all new teachers create a class within 48h",
+        "Of teachers who created a class within 48h, D7 retention is ~41%; never checked the D7 of the whole 48h cohort beyond that",
+        "Teachers who sign up via school/district invite already have class rosters ready; self-serve signups often are 'just looking'",
+        "~40% of signups come from district invites"
+      ],
+      "unknowns": [
+        "Retention of district vs self-serve teachers separately",
+        "How many teachers abandon if forced into class creation in session 1"
+      ]
+    }
   },
   {
     "id": "s07",
@@ -60,7 +153,22 @@
     "risk": "High",
     "trap": "Sunk cost",
     "industry": "Health/Wellness",
-    "prompt": "We spent 8 months building a meal planning feature for our fitness app. It's live for 3 months now but only 4% of users have tried it, and of those, only 12% used it more than once. Our team lead thinks we just need better onboarding for the feature. We've already invested $400k in it. Should we keep investing or move on?"
+    "prompt": "We spent 8 months building a meal planning feature for our fitness app. It's live for 3 months now but only 4% of users have tried it, and of those, only 12% used it more than once. Our team lead thinks we just need better onboarding for the feature. We've already invested $400k in it. Should we keep investing or move on?",
+    "persona": {
+      "role": "Product director at a fitness app (~600k MAU)",
+      "stance": "Torn; the team lead pushes hard for 'better onboarding'; leadership hates writing off $400k.",
+      "knows": [
+        "Feature discovery: it's in a secondary tab; ~30% of MAU have seen the tab",
+        "Of users who tried it, top drop-off reason in 9 interviews: 'too much effort to log meals'",
+        "The 12% repeat users are mostly in a 'weight loss' goal segment",
+        "Ongoing maintenance: ~1.5 engineers",
+        "Competing roadmap item: social workout challenges, which users request often"
+      ],
+      "unknowns": [
+        "Whether repeat users retain better in the app overall",
+        "Cost/benefit of a simplified version"
+      ]
+    }
   },
   {
     "id": "s08",
@@ -69,7 +177,22 @@
     "risk": "High",
     "trap": "Recency bias",
     "industry": "Logistics",
-    "prompt": "Last quarter we got 3 inbound requests from large agricultural companies wanting cold-chain logistics. We currently do general freight only. Our sales team is excited and wants to build a cold-chain vertical. It would require $2M+ investment in specialized vehicles and compliance. One of the 3 leads already went with a competitor. What's our next move?"
+    "prompt": "Last quarter we got 3 inbound requests from large agricultural companies wanting cold-chain logistics. We currently do general freight only. Our sales team is excited and wants to build a cold-chain vertical. It would require $2M+ investment in specialized vehicles and compliance. One of the 3 leads already went with a competitor. What's our next move?",
+    "persona": {
+      "role": "VP Strategy at a regional freight company (~$40M revenue)",
+      "stance": "Interested but cautious; sales team pressure is strong.",
+      "knows": [
+        "The 3 leads came within 6 weeks of each other, after a regional heatwave disrupted a competitor's cold-chain service",
+        "In the previous 3 years they received 1 cold-chain inquiry total",
+        "The remaining 2 leads would represent ~$600k/year combined if won",
+        "Cold-chain compliance certification takes ~9 months",
+        "There are 2 established cold-chain providers in the region"
+      ],
+      "unknowns": [
+        "Whether demand persists once the competitor recovers",
+        "Margins for cold-chain vs general freight in their region"
+      ]
+    }
   },
   {
     "id": "s09",
@@ -78,7 +201,21 @@
     "risk": "Medium",
     "trap": "Solution-first",
     "industry": "Insurance",
-    "prompt": "We want to implement an AI chatbot to handle tier-1 support tickets. Our CSAT is 72% and average resolution time is 4.2 hours. We've already talked to 3 vendors. Which one should we pick?"
+    "prompt": "We want to implement an AI chatbot to handle tier-1 support tickets. Our CSAT is 72% and average resolution time is 4.2 hours. We've already talked to 3 vendors. Which one should we pick?",
+    "persona": {
+      "role": "Head of Customer Support at a B2C subscription software company",
+      "stance": "Budget already approved for a chatbot; wants to pick a vendor and move on.",
+      "knows": [
+        "~9,000 tickets/month; top categories: password/login 28%, billing questions 22%, bug reports 18%, how-to 20%, other 12%",
+        "CSAT complaints mostly mention slow response, not resolution quality",
+        "Resolution time median 4.2h; first response time median 3.5h (team is understaffed on weekends)",
+        "A help center exists but search is poor; ~60% of how-to tickets have an existing article"
+      ],
+      "unknowns": [
+        "CSAT by ticket category",
+        "Whether customers would accept a bot"
+      ]
+    }
   },
   {
     "id": "s10",
@@ -87,7 +224,22 @@
     "risk": "High",
     "trap": "Sunk cost",
     "industry": "SaaS B2B",
-    "prompt": "We have a legacy reporting module that 8% of our users still use. It costs us $15k/month in maintenance and blocks our migration to the new architecture. Engineering wants to kill it. Product is worried about churn from those 8%. The module was our flagship feature 3 years ago. How do we decide?"
+    "prompt": "We have a legacy reporting module that 8% of our users still use. It costs us $15k/month in maintenance and blocks our migration to the new architecture. Engineering wants to kill it. Product is worried about churn from those 8%. The module was our flagship feature 3 years ago. How do we decide?",
+    "persona": {
+      "role": "Group PM for analytics at a B2B SaaS (~$18M ARR)",
+      "stance": "Sympathetic to engineering but scared of being blamed for churn; emotional attachment to the 'flagship'.",
+      "knows": [
+        "8% of users = ~140 accounts",
+        "Those 140 accounts represent ~15% of ARR (they skew older and larger)",
+        "~60 of those accounts use it weekly; the rest log in rarely",
+        "The new architecture migration is blocked on this module; delay costs ~2 engineer-months per quarter",
+        "New reporting module covers ~70% of legacy functionality; missing: scheduled exports and custom pivots"
+      ],
+      "unknowns": [
+        "Which of the 140 accounts depend on scheduled exports specifically",
+        "Renewal dates of those accounts"
+      ]
+    }
   },
   {
     "id": "s11",
@@ -96,7 +248,21 @@
     "risk": "Low",
     "trap": "None",
     "industry": "Social/Consumer",
-    "prompt": "We want to increase push notification opt-in from 34% to 45%. We're testing a new permission prompt that explains benefits before the OS prompt appears. We've built both versions and need to set up the experiment. DAU is ~200k. What's the test plan?"
+    "prompt": "We want to increase push notification opt-in from 34% to 45%. We're testing a new permission prompt that explains benefits before the OS prompt appears. We've built both versions and need to set up the experiment. DAU is ~200k. What's the test plan?",
+    "persona": {
+      "role": "Growth PM at a consumer news app",
+      "stance": "Execution-focused; wants a solid test plan.",
+      "knows": [
+        "Platform split: 65% iOS, 35% Android (Android 13+ requires runtime permission)",
+        "Opt-in is measured on new installs only; ~3k new installs/day",
+        "Push-enabled users have 2x D30 retention (correlational)",
+        "Can randomize at install level via their experimentation tool",
+        "Concern: the pre-prompt adds a screen to onboarding"
+      ],
+      "unknowns": [
+        "Whether the pre-prompt increases onboarding drop-off"
+      ]
+    }
   },
   {
     "id": "s12",
@@ -105,7 +271,22 @@
     "risk": "High",
     "trap": "Confirmation bias",
     "industry": "SaaS B2B",
-    "prompt": "We've always been sales-led, but our new VP of Product thinks we should go PLG. He keeps pointing to Slack and Notion as examples. Our ACV is $25k, sales cycle is 45 days, and we have 340 enterprise accounts. Last quarter, 12 people signed up for our free trial organically but none converted. He says the trial experience just needs work."
+    "prompt": "We've always been sales-led, but our new VP of Product thinks we should go PLG. He keeps pointing to Slack and Notion as examples. Our ACV is $25k, sales cycle is 45 days, and we have 340 enterprise accounts. Last quarter, 12 people signed up for our free trial organically but none converted. He says the trial experience just needs work.",
+    "persona": {
+      "role": "Director of Product Ops, reporting to the new VP of Product",
+      "stance": "Privately skeptical of PLG but loyal to the VP; repeats the VP's argument at first.",
+      "knows": [
+        "Buyers are IT/compliance leaders at mid-size enterprises; product requires SSO and data integration to deliver value",
+        "Typical implementation takes 3-4 weeks with a solutions engineer",
+        "The 12 trial signups: 7 were students/consultants, 3 were from existing customers, 2 were small companies",
+        "Slack and Notion were bottom-up tools with single-user value; their product needs admin setup",
+        "Sales win rate is 28%; CAC payback ~16 months"
+      ],
+      "unknowns": [
+        "Whether any part of the product delivers single-user value",
+        "How many end users inside accounts are active vs licensed"
+      ]
+    }
   },
   {
     "id": "s13",
@@ -114,7 +295,22 @@
     "risk": "Medium",
     "trap": "Anchoring",
     "industry": "Fintech",
-    "prompt": "Our competitor's mobile app has 4.8 stars and 500k downloads. We're planning our own mobile app and the PM set the goal at 4.5 stars and 100k downloads in 6 months. We currently have a mobile-responsive web app with 80k monthly mobile visitors. Is this the right approach?"
+    "prompt": "Our competitor's mobile app has 4.8 stars and 500k downloads. We're planning our own mobile app and the PM set the goal at 4.5 stars and 100k downloads in 6 months. We currently have a mobile-responsive web app with 80k monthly mobile visitors. Is this the right approach?",
+    "persona": {
+      "role": "Head of Product at a personal finance web app",
+      "stance": "Wants approval for the app; open to challenge if it's concrete.",
+      "knows": [
+        "80k monthly mobile web visitors; mobile web conversion to signup 1.1% vs desktop 3.4%",
+        "Main mobile web complaints: slow loading, login every time (no persistent session)",
+        "Competitor has been on the stores for 5 years with a much larger brand",
+        "The 4.5 stars/100k goal was set by looking at the competitor's numbers",
+        "Building native apps: estimated 2 engineers for 6 months"
+      ],
+      "unknowns": [
+        "What mobile users are trying to do that fails",
+        "Whether a PWA would solve the session/speed issues"
+      ]
+    }
   },
   {
     "id": "s14",
@@ -123,7 +319,22 @@
     "risk": "High",
     "trap": "HiPPO",
     "industry": "Marketplace",
-    "prompt": "Our board wants us to increase take rate from 12% to 18% to improve unit economics before our Series B. They say the market will bear it because our NPS is 67. We have 4,200 active sellers and process $3.2M GMV/month. The board wants this implemented in Q2. How should we approach this?"
+    "prompt": "Our board wants us to increase take rate from 12% to 18% to improve unit economics before our Series B. They say the market will bear it because our NPS is 67. We have 4,200 active sellers and process $3.2M GMV/month. The board wants this implemented in Q2. How should we approach this?",
+    "persona": {
+      "role": "CEO of a B2B handmade-goods marketplace",
+      "stance": "Under board pressure, wants a plan to implement, not to argue.",
+      "knows": [
+        "Top 15% of sellers = ~65% of GMV; they have their own websites and sell on other channels",
+        "Competitor marketplaces charge 10-15% plus listing fees",
+        "NPS 67 is from buyers, not sellers; seller NPS was never measured",
+        "Seller monthly churn: 3%",
+        "Series B planned in ~4 months"
+      ],
+      "unknowns": [
+        "Seller price elasticity",
+        "How many top sellers would move volume off-platform"
+      ]
+    }
   },
   {
     "id": "s15",
@@ -132,7 +343,21 @@
     "risk": "Medium",
     "trap": "Solution-first",
     "industry": "Edtech",
-    "prompt": "We want to add gamification to our learning platform — badges, streaks, leaderboards, the whole thing. Duolingo does it really well and our students are in the same age group (18-25). Can you help us design the points system?"
+    "prompt": "We want to add gamification to our learning platform — badges, streaks, leaderboards, the whole thing. Duolingo does it really well and our students are in the same age group (18-25). Can you help us design the points system?",
+    "persona": {
+      "role": "PM at an online learning platform for university students",
+      "stance": "Already sold leadership on gamification; wants help with the points design.",
+      "knows": [
+        "Main problem stated by leadership: course completion is 18%",
+        "Drop-off is heaviest in week 2-3 of courses",
+        "Students take courses mostly because they're required for credit (~70%)",
+        "Exit survey (n=210): top reasons for dropping are 'too busy' and 'content too long'",
+        "Duolingo is voluntary daily practice; their courses are 6-week programs"
+      ],
+      "unknowns": [
+        "Whether engagement (not motivation) is the issue for credit-required students"
+      ]
+    }
   },
   {
     "id": "s16",
@@ -141,7 +366,21 @@
     "risk": "Medium",
     "trap": "Vague metrics",
     "industry": "SaaS B2B",
-    "prompt": "We built a churn prediction model that flags accounts at risk. It's 78% accurate on historical data. We want to trigger automated outreach (email + in-app) when the model flags an account. Monthly churn is 3.2%. We need to set up the intervention experiment. What metrics and thresholds should we use?"
+    "prompt": "We built a churn prediction model that flags accounts at risk. It's 78% accurate on historical data. We want to trigger automated outreach (email + in-app) when the model flags an account. Monthly churn is 3.2%. We need to set up the intervention experiment. What metrics and thresholds should we use?",
+    "persona": {
+      "role": "Customer success ops lead at a B2B SaaS (~2,500 accounts)",
+      "stance": "Wants metrics and thresholds; will provide data when asked.",
+      "knows": [
+        "The model flags ~100 accounts per month (~4% of accounts)",
+        "On holdout data: precision ~35%, recall ~45% (the '78% accurate' figure is overall accuracy across all accounts)",
+        "Top churn reasons in exit surveys: missing features 30%, budget 25%, low adoption 30%",
+        "Current outreach is manual by CSMs, only for top 300 accounts",
+        "Can randomize treatment/control among flagged accounts"
+      ],
+      "unknowns": [
+        "Whether outreach changes behavior for 'budget' churners"
+      ]
+    }
   },
   {
     "id": "s17",
@@ -150,7 +389,21 @@
     "risk": "High",
     "trap": "Confirmation bias",
     "industry": "Developer Tools",
-    "prompt": "We want to become a platform and open our API to third-party developers. Our CTO has been pushing this for 2 years. We have 2,300 customers using our tool directly. Three customers asked about API access in the last 6 months. Our CTO wrote a 40-page strategy doc about the platform vision. Should we go for it?"
+    "prompt": "We want to become a platform and open our API to third-party developers. Our CTO has been pushing this for 2 years. We have 2,300 customers using our tool directly. Three customers asked about API access in the last 6 months. Our CTO wrote a 40-page strategy doc about the platform vision. Should we go for it?",
+    "persona": {
+      "role": "VP Product at a B2B workflow tool",
+      "stance": "Neutral-to-skeptical; wants an honest assessment to bring to the CTO.",
+      "knows": [
+        "The 3 API requests: 2 wanted data export to their BI tool, 1 wanted a Zapier-style integration",
+        "No developers outside customers have ever asked",
+        "CTO's doc cites Stripe and Twilio as models",
+        "Building a public API + developer program: estimated 6 engineers for a year",
+        "Customer churn reasons are mostly about missing integrations with tools they already use"
+      ],
+      "unknowns": [
+        "Whether partners would build on the platform"
+      ]
+    }
   },
   {
     "id": "s18",
@@ -159,7 +412,21 @@
     "risk": "Low",
     "trap": "None",
     "industry": "Consumer App",
-    "prompt": "We want to launch a referral program. Current organic growth is 8% MoM. We're testing two incentive structures: (A) $10 credit for referrer only vs (B) $5 for both referrer and referee. We have 120k active users. What's the experiment setup?"
+    "prompt": "We want to launch a referral program. Current organic growth is 8% MoM. We're testing two incentive structures: (A) $10 credit for referrer only vs (B) $5 for both referrer and referee. We have 120k active users. What's the experiment setup?",
+    "persona": {
+      "role": "Growth PM at a consumer meal-kit app",
+      "stance": "Execution-focused; wants a solid experiment.",
+      "knows": [
+        "Average order $60, gross margin 30%, first-order discount already $20",
+        "Current organic invites: ~1.5% of users send one per month",
+        "Can randomize at user level; referral link tracking exists",
+        "Fraud concern: multi-account abuse happened with past promos",
+        "Wants a decision within 6 weeks"
+      ],
+      "unknowns": [
+        "Referee LTV vs paid-acquisition LTV"
+      ]
+    }
   },
   {
     "id": "s19",
@@ -168,7 +435,22 @@
     "risk": "High",
     "trap": "Anchoring",
     "industry": "SaaS B2B",
-    "prompt": "We're launching an Enterprise tier. Our current pricing is $29/mo (Starter) and $99/mo (Pro). A pricing consultant recommended $499/mo for Enterprise based on competitor benchmarking. We have 15 Pro accounts that asked about SSO, audit logs, and custom roles. Sales thinks $499 is too low, the consultant says it's market rate. What's the right call?"
+    "prompt": "We're launching an Enterprise tier. Our current pricing is $29/mo (Starter) and $99/mo (Pro). A pricing consultant recommended $499/mo for Enterprise based on competitor benchmarking. We have 15 Pro accounts that asked about SSO, audit logs, and custom roles. Sales thinks $499 is too low, the consultant says it's market rate. What's the right call?",
+    "persona": {
+      "role": "Founder/CEO of a B2B design collaboration tool",
+      "stance": "Wants a number; slightly annoyed by the consultant-vs-sales disagreement.",
+      "knows": [
+        "~2,100 Starter and ~480 Pro accounts",
+        "The 15 Pro accounts asking for SSO average 45 seats each; Pro is per-workspace, not per-seat",
+        "Two of them said 'our security team blocks us without SSO'",
+        "Consultant benchmarked 4 competitors whose enterprise plans are per-seat",
+        "No pricing conversation with those 15 accounts has happened yet"
+      ],
+      "unknowns": [
+        "Willingness to pay of the 15 accounts",
+        "Whether per-seat or flat pricing fits their buyers"
+      ]
+    }
   },
   {
     "id": "s20",
@@ -177,6 +459,21 @@
     "risk": "High",
     "trap": "Survivorship bias",
     "industry": "Social/UGC",
-    "prompt": "Our top 50 creators produce 60% of the content and have zero moderation flags. So we want to give all creators with >10k followers auto-approval (skip moderation queue) to reduce review costs and improve creator satisfaction. Currently we review 100% of posts, which takes 2.3 hours average. Our moderation team costs $28k/month. What do you think?"
+    "prompt": "Our top 50 creators produce 60% of the content and have zero moderation flags. So we want to give all creators with >10k followers auto-approval (skip moderation queue) to reduce review costs and improve creator satisfaction. Currently we review 100% of posts, which takes 2.3 hours average. Our moderation team costs $28k/month. What do you think?",
+    "persona": {
+      "role": "Trust & Safety product lead at a short-video creator platform",
+      "stance": "Under cost pressure from finance; wants the auto-approval to ship.",
+      "knows": [
+        "~1,100 creators have >10k followers; the top 50 are a subset",
+        "Top 50 creators are mostly established, brand-sponsored creators",
+        "Flag rate for creators with 10k-100k followers: never computed",
+        "Last year, 3 major incidents came from mid-size creators (20-50k followers)",
+        "Moderation review cost is roughly linear with post volume"
+      ],
+      "unknowns": [
+        "Flag rate distribution across follower tiers",
+        "Brand/legal cost of one incident"
+      ]
+    }
   }
 ]
