@@ -3,6 +3,8 @@
 **Date:** 2026-02-10
 **Version under test:** v1.0
 **Model:** Claude Sonnet (claude-sonnet-4-20250514)
+**System prompt:** a condensed (~500-word) version of the v1.0 operating instructions, embedded in `socratic-lab.jsx` — not the full `process/socratic-1.0.md` (~3,100 words). Responses were capped at 1,000 tokens (one response, Cold Chain Logistics, was cut off).
+**Follow-up:** see [v2/](v2/) for a multi-turn re-run with the full prompt.
 **Evaluator:** LLM-based rubric scoring (see Limitations)
 
 ---
@@ -226,7 +228,7 @@ The scores should be treated as directional, not precise. A 76% aggregate is mea
 
 ### Model-Specific Results
 
-These results are specific to Claude Sonnet (claude-sonnet-4-20250514) running the v1.0 system prompt. Different foundation models (GPT-4, Gemini, etc.) would produce different results on the same scenarios. The strengths and weaknesses described here reflect both the system prompt design and the model's tendencies -- they cannot be fully disentangled.
+These results are specific to Claude Sonnet (claude-sonnet-4-20250514) running the condensed v1.0 system prompt embedded in the lab. Different foundation models (GPT-4, Gemini, etc.) would produce different results on the same scenarios. The strengths and weaknesses described here reflect both the system prompt design and the model's tendencies -- they cannot be fully disentangled.
 
 ### Synthetic Scenarios
 

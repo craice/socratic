@@ -47,7 +47,7 @@ The Quickstart Loop — use this 90% of the time:
 
 This isn't a theoretical framework. We tested the process against 20 realistic product scenarios spanning 8 industries, all 3 discovery modes, and 7 types of cognitive traps.
 
-Each scenario was processed by the Copilot (Claude Sonnet with `socratic-1.0.md` as the system prompt), then independently evaluated against 10 criteria derived from the operating instructions.
+Each scenario was processed by the Copilot (Claude Sonnet 4 with a condensed, ~500-word version of the operating instructions as the system prompt — not the full `socratic-1.0.md`), then independently evaluated against 10 criteria derived from the operating instructions. A follow-up multi-turn evaluation with the full prompt is in [evaluation/v2/](evaluation/v2/).
 
 ![Socratic Lab Results](socratic-lab-results.png)
 
