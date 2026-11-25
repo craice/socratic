@@ -14,10 +14,6 @@ site/.astro/
 .DS_Store
 Thumbs.db
 
-# Source / reference files (originals copied into process/ and evaluation/)
-/socratic.md
-/socratic-lab.jsx
-/socratic-lab-results.md
 
 # Spec (build reference, not part of the public repo)
 SPEC.md
